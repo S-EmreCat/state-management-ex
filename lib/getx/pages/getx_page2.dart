@@ -3,10 +3,11 @@ import 'package:get/get.dart';
 
 import '../controller/getx_controller.dart';
 
-class GetxPage2 extends StatelessWidget {
-  GetxPage2({Key? key}) : super(key: key);
-  final MyGetxController _controller = Get
-      .find(); // binding kullandığımız için find kullanımı Controller bulmak için yeterli.
+class GetxPage2 extends GetView<MyGetxController>
+// türünü belirtiyoruz GetView<MyGetxController>
+//  Get.find yazmaya gerek kalmadan bize "controller" adında Controller oluşturuyor.
+{
+  const GetxPage2({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +16,7 @@ class GetxPage2 extends StatelessWidget {
       body: Center(
         child: Obx(
           () => Text(
-            _controller.count.toString(),
+            controller.count.toString(),
           ),
         ),
       ),

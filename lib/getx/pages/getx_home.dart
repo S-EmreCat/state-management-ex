@@ -36,6 +36,21 @@ class GetxHome extends StatelessWidget {
               },
               child: const Text("go to shopping page"),
             ),
+            ElevatedButton(
+              onPressed: () => Get.changeTheme(
+                  Get.isDarkMode ? ThemeData.light() : ThemeData.dark()),
+              child: const Text("Change Theme"),
+            ),
+            ElevatedButton(
+              onPressed: () => Get.snackbar('Hi', 'I am a modern snackbar'),
+              child: const Text("Show dialog"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed("/wishlist");
+              },
+              child: const Text("go to whish list page"),
+            ),
           ],
         ),
       ),
