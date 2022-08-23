@@ -30,6 +30,12 @@ class GetxHome extends StatelessWidget {
               },
               child: const Text("go to second page"),
             ),
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed("/shopping");
+              },
+              child: const Text("go to shopping page"),
+            ),
           ],
         ),
       ),
