@@ -1,10 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import 'controller/getx_controller.dart';
 
 class GetxPage2 extends StatelessWidget {
-  const GetxPage2({Key? key}) : super(key: key);
+  GetxPage2({Key? key}) : super(key: key);
+  final MyGetxController _controller = Get.find();
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(),
+      body: Center(
+        child: Obx(
+          () => Text(
+            _controller.count.toString(),
+          ),
+        ),
+      ),
+    );
   }
 }

@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:statemanagement/getx/controller/getx_controller.dart';
 import 'package:get/get.dart';
 
-import 'getx_controller.dart';
-
-class GetxHome extends StatefulWidget {
+class GetxHome extends StatelessWidget {
   GetxHome({Key? key}) : super(key: key);
-  final Controller ctrl = Get.put(Controller());
-  @override
-  State<GetxHome> createState() => _GetxHomeState();
-}
 
-class _GetxHomeState extends State<GetxHome> {
+  final MyGetxController _controller = Get.put(MyGetxController());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,13 +16,19 @@ class _GetxHomeState extends State<GetxHome> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Obx(
-              () => Text("${widget.ctrl.count}"),
+              () => Text(_controller.count.toString()),
             ),
             ElevatedButton(
               onPressed: () {
-                widget.ctrl.increment();
+                _controller.increment();
               },
-              child: const Text("Click"),
+              child: const Text("click add"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed("/second");
+              },
+              child: const Text("go to second page"),
             ),
           ],
         ),
