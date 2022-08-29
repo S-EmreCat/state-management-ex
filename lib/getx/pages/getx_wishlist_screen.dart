@@ -1,6 +1,7 @@
 // screens/wish_list_screen.dart
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
 import '../controller/wishlist_controller.dart';
 
 class WishListScreen extends StatelessWidget {

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:statemanagement/provider/counter/counter_app.dart';
+import 'package:provider/provider.dart';
+import 'provider/movieList/movie_all_list_screen.dart';
+import 'provider/movieList/movie_provider.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(ChangeNotifierProvider<MovieProvider>(
+    create: (context) => MovieProvider(), child: const MyApp()));
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -10,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Material App',
-      home: CounterProviderView(),
+      home: MovieAllListScreen(),
     );
   }
 }

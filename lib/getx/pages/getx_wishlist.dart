@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:statemanagement/getx/controller/wishlist_controller.dart';
+import '../controller/wishlist_controller.dart';
 
 class WishListPage extends StatelessWidget {
   WishListPage({Key? key}) : super(key: key);

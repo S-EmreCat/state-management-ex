@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:statemanagement/getx/controller/getx_controller.dart';
+import '../controller/getx_controller.dart';
 import 'package:get/get.dart';
 
 class GetxHome extends StatelessWidget {

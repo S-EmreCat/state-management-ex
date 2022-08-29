@@ -1,4 +1,4 @@
-import 'package:statemanagement/getx/controller/wishlist_controller.dart';
+import '../controller/wishlist_controller.dart';
 
 import 'package:get/get.dart';
 
