@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:statemanagement/provider/movieList/movie_provider.dart';
+import 'movie_provider.dart';
 
 class MovieLikedScreen extends StatelessWidget {
   const MovieLikedScreen({super.key});

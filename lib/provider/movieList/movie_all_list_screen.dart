@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:statemanagement/provider/movieList/movie_liked_list_screen.dart';
-import 'package:statemanagement/provider/movieList/movie_provider.dart';
+import 'movie_liked_list_screen.dart';
+import 'movie_provider.dart';
 
 class MovieAllListScreen extends StatelessWidget {
   const MovieAllListScreen({super.key});
